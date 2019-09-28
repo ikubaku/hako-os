@@ -1,11 +1,11 @@
 pub enum Syscall {
     Run {
-        func: fn(isize, **mut u8) -> isize,
+        func: fn(isize, *mut [u8]) -> isize,
         name: *const u8,
         priority: isize,
         stacksize: isize,
         argc: isize,
-        argv: **mut u8,
+        argv: *mut [u8],
         ret: u32,
     },
     Exit,
@@ -14,10 +14,14 @@ pub enum Syscall {
     },
 }
 
-pub fn run(func: fn(isize, **mut u8) -> isize, name: *const u8, stacksize: isize, argc: isize, argv: **mut u8) {
+pub fn run(
+    func: fn(isize, *mut [u8]) -> isize,
+    name: *const u8,
+    stacksize: isize,
+    argc: isize,
+    argv: *mut [u8],
+) {
     return;
 }
 
-pub fn exit() -> ! {
-
-}
+pub fn exit() -> ! {}
