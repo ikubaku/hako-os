@@ -1,0 +1,12 @@
+= hako-os
+
+KOZOS clone written in Rust
+
+== Documentation
+TBD
+
+== Inspiration
+http://kozos.jp/kozos/
+
+== License
+See LICENSE
